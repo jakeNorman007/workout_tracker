@@ -15,14 +15,23 @@ body {
   line-height: 1.6;
   height: 100vh;
   overscroll-behavior-y: none;
-  background-color: #fff;
+  background-color: #2f3e46;
   display: flex;
 }
 
-/* SIDEBAR */
+a,
+a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #84a98c;
+}
+
 .sidebar {
   flex-basis: 50rem;
-  background-color: #2F3E46;
+  background-color: #2f3e46;
   border-right: 0.15rem solid black;
   padding: 2rem;
   display: flex;
@@ -41,7 +50,7 @@ body {
 }
 
 .workout {
-  background-color: #84A98C;
+  background-color: #84a98c;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   padding: 1.5rem 2.75rem;
@@ -81,7 +90,7 @@ body {
 }
 
 .form {
-  background-color: #84A98C;
+  background-color: #84a98c;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   padding: 1.5rem 2.75rem;
@@ -90,7 +99,9 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 1rem 2rem;
   height: 9.25rem;
-  transition: all 0.5s, transform 1ms;
+  transition:
+    all 0.5s,
+    transform 1ms;
 }
 
 .form.hidden {
@@ -141,7 +152,7 @@ body {
 }
 
 .leaflet-popup .leaflet-popup-content-wrapper {
-  background-color: lightgrey;
+  background-color: #2f3e46;
   color: #fff;
   border-radius: 5px;
   padding-right: 0.6rem;
@@ -152,9 +163,34 @@ body {
 }
 
 .leaflet-popup .leaflet-popup-tip {
-  background-color: black;
+  background-color: #84a98c;
 }
 
-.click {
-    color: #fff;
+.header {
+  background-color: #84a98c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+  }
+
+  .sidebar {
+    background-color: #2f3e46;
+    height: 45vh;
+  }
 }
